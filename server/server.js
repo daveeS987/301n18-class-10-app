@@ -20,26 +20,13 @@ app.get('/todo', handleToDo);
 
 // Route Handlers
 function handleToDo(request, response) {
-
-  const SQL = 'SELECT * FROM tasks;';
+  let SQL = 'SELECT * FROM tasks;';
   client.query(SQL)
     .then(results => {
-      console.log(results);
+      console.log('results: ', results);
       response.status(200).json(results.rows);
     })
     .catch(response.status(500).send('Something went wrong fetching from database'));
-
-
-  // let thingsToDo = [
-  //   { task: 'watch tv' },
-  //   { task: 'walk rosie' },
-  //   { task: 'practice for lecture' },
-  //   { task: 'cooking' },
-  //   { task: 'eat cookies' },
-  //   { task: 'take a nap' },
-  // ];
-
-  // response.status(200).json(thingsToDo);
 }
 
 // Go!
@@ -47,4 +34,9 @@ function startServer() {
   app.listen(PORT, () => console.log('Server is running on PORT:', PORT));
 }
 
-startServer(); 
+client.connect()
+  .then(() => {
+    startServer();
+  });
+
+
