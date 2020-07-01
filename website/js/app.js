@@ -11,11 +11,13 @@ function renderThings(list) {
 
 function showThingsToDo() {
 
-  let things = [
-    { task: 'watch tv' },
-    { task: 'take a nap' },
-  ];
-  renderThings(things);
+  const ajaxSettings = {
+    method: 'GET',
+  };
+  $.ajax('http://localhost:3000/todo', ajaxSettings)
+    .then(data => {
+      renderThings(data);
+    })
 
 }
 
