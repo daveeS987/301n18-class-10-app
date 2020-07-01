@@ -2,9 +2,9 @@
 
 function renderThings(list) {
   const template = $('#thingsToDoTemplate').html;
-  const container = $('.things');
+  const container = $('#things');
   list.forEach(item => {
-    let newItemHTML = Mustache.render(item, template)
+    let newItemHTML = Mustache.render(template, item)
     container.append(newItemHTML);
   });
 }
@@ -15,7 +15,7 @@ function showThingsToDo() {
     { thing: 'watch tv' },
     { thing: 'take a nap' },
   ];
-  renderThings(things);
+  renderThings(things.thing);
 
 }
 

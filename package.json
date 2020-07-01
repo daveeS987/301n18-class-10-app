@@ -1,0 +1,25 @@
+{
+  "name": "301n18-class-10-app",
+  "version": "1.0.0",
+  "description": "Enclosed you'll find a server and a website that you'll be fixing up and improving over the course of this session.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daveeS987/301n18-class-10-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daveeS987/301n18-class-10-app/issues"
+  },
+  "homepage": "https://github.com/daveeS987/301n18-class-10-app#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}

@@ -31,7 +31,7 @@ function handleToDo(request, response) {
 
 // Go!
 function startServer() {
-  express.listen(PORT, () => console.log('Server is running'));
+  app.listen(PORT, () => console.log('Server is running'));
 }
 
 startServer();
