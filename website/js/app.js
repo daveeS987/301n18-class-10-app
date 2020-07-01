@@ -18,7 +18,6 @@ function showThingsToDo() {
     .then(data => {
       renderThings(data);
     })
-
 }
 
 $(document).ready(function () {
