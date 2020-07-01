@@ -12,10 +12,10 @@ function renderThings(list) {
 function showThingsToDo() {
 
   let things = [
-    { thing: 'watch tv' },
-    { thing: 'take a nap' },
+    { task: 'watch tv' },
+    { task: 'take a nap' },
   ];
-  renderThings(things.thing);
+  renderThings(things);
 
 }
 
