@@ -1,7 +1,7 @@
 'use strict';
 
 function renderThings(list) {
-  const template = $('#thingsToDoTemplate').html;
+  const template = $('#thingsToDoTemplate').html();
   const container = $('#things');
   list.forEach(item => {
     let newItemHTML = Mustache.render(template, item)
